@@ -227,7 +227,7 @@ async function seedDatabase() {
               },
 
             },
-
+            imageUrl: service.imageUrl
           },
 
         });
@@ -241,13 +241,8 @@ async function seedDatabase() {
     // Fechar a conexão com o banco de dados
 
     await prisma.$disconnect();
-
   } catch (error) {
-
     console.error("Erro ao criar as barbearias:", error);
-
   }
-
-}
- 
+} 
 seedDatabase();
